@@ -8,43 +8,36 @@
 
 'use strict';
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
+    var dtsm = require("dtsm");
 
-  // Please see the Grunt documentation for more information regarding task
-  // creation: http://gruntjs.com/creating-tasks
+    grunt.registerMultiTask("dtsm", "Install .d.ts files by dtsm", function () {
+        var options = this.options({
+            config: "dtsm.json"
+        });
 
-  grunt.registerMultiTask('dtsm', 'Grunt plugin for DTSM', function() {
-    // Merge task-specific and/or target-specific options with these defaults.
-    var options = this.options({
-      punctuation: '.',
-      separator: ', '
-    });
+        var done = this.async();
 
-    // Iterate over all specified file groups.
-    this.files.forEach(function(f) {
-      // Concat specified files.
-      var src = f.src.filter(function(filepath) {
-        // Warn on and remove invalid source files (if nonull was set).
-        if (!grunt.file.exists(filepath)) {
-          grunt.log.warn('Source file "' + filepath + '" not found.');
-          return false;
-        } else {
-          return true;
+        if (!grunt.file.exists(options.config)) {
+            grunt.log.error(options.config + " is not exists");
+            return done(false);
         }
-      }).map(function(filepath) {
-        // Read file source.
-        return grunt.file.read(filepath);
-      }).join(grunt.util.normalizelf(options.separator));
 
-      // Handle options.
-      src += options.punctuation;
-
-      // Write the destination file.
-      grunt.file.write(f.dest, src);
-
-      // Print a success message.
-      grunt.log.writeln('File "' + f.dest + '" created.');
+        var manager = new dtsm.Manager({
+            configPath: options.config
+        });
+        manager
+            .installFromFile()
+            .then(function (result) {
+                var depNames = Object.keys(result.dependencies);
+                grunt.log.ok(depNames.length + " files created.");
+                depNames.forEach(function (depName) {
+                    grunt.log.verbose.ok(depName);
+                });
+                done(true);
+            }, function (error) {
+                grunt.log.error(error);
+                done(false);
+            });
     });
-  });
-
 };

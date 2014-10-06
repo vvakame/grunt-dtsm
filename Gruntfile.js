@@ -31,18 +31,13 @@ module.exports = function (grunt) {
         // Configuration to be run (and then tested).
         dtsm: {
             default_options: {
-                options: {},
-                files: {
-                    'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
+                options: {
+                    config: "test/fixtures/jquery-dtsm.json"
                 }
             },
             custom_options: {
                 options: {
-                    separator: ': ',
-                    punctuation: ' !!!'
-                },
-                files: {
-                    'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
+                    config: "test/fixtures/atom-dtsm.json"
                 }
             }
         },
@@ -51,7 +46,6 @@ module.exports = function (grunt) {
         nodeunit: {
             tests: ['test/*_test.js']
         }
-
     });
 
     // Actually load this plugin's task(s).

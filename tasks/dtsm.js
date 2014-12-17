@@ -23,11 +23,13 @@ module.exports = function (grunt) {
             return done(false);
         }
 
-        var manager = new dtsm.Manager({
-            configPath: options.config
-        });
-        manager
-            .installFromFile()
+        dtsm
+            .createManager({
+                configPath: options.config
+            })
+            .then(function (manager) {
+                return manager.installFromFile();
+            })
             .then(function (result) {
                 var depNames = Object.keys(result.dependencies);
                 grunt.log.ok(depNames.length + " files created.");

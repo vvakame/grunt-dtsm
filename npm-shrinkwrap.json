@@ -1,10 +1,10 @@
 {
   "name": "grunt-dtsm",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "dependencies": {
     "dtsm": {
-      "version": "0.1.0",
-      "from": "dtsm@0.1.0",
+      "version": "0.1.1",
+      "from": "dtsm@~0.1.1",
       "dependencies": {
         "commander": {
           "version": "2.5.0",
@@ -2260,25 +2260,25 @@
     },
     "grunt-contrib-clean": {
       "version": "0.6.0",
-      "from": "grunt-contrib-clean@^0.6.0",
+      "from": "grunt-contrib-clean@~0.6.0",
       "resolved": "https://registry.npmjs.org/grunt-contrib-clean/-/grunt-contrib-clean-0.6.0.tgz",
       "dependencies": {
         "rimraf": {
           "version": "2.2.8",
-          "from": "rimraf@~2.2.8",
+          "from": "rimraf@~2.2.1",
           "resolved": "https://registry.npmjs.org/rimraf/-/rimraf-2.2.8.tgz"
         }
       }
     },
     "grunt-contrib-jshint": {
       "version": "0.10.0",
-      "from": "grunt-contrib-jshint@^0.10.0",
+      "from": "grunt-contrib-jshint@~0.10.0",
       "resolved": "https://registry.npmjs.org/grunt-contrib-jshint/-/grunt-contrib-jshint-0.10.0.tgz",
       "dependencies": {
         "jshint": {
-          "version": "2.5.10",
+          "version": "2.5.11",
           "from": "jshint@~2.5.0",
-          "resolved": "https://registry.npmjs.org/jshint/-/jshint-2.5.10.tgz",
+          "resolved": "https://registry.npmjs.org/jshint/-/jshint-2.5.11.tgz",
           "dependencies": {
             "cli": {
               "version": "0.6.5",
@@ -2430,7 +2430,7 @@
     },
     "grunt-contrib-nodeunit": {
       "version": "0.4.1",
-      "from": "grunt-contrib-nodeunit@^0.4.1",
+      "from": "grunt-contrib-nodeunit@~0.4.1",
       "resolved": "https://registry.npmjs.org/grunt-contrib-nodeunit/-/grunt-contrib-nodeunit-0.4.1.tgz",
       "dependencies": {
         "hooker": {
@@ -2506,7 +2506,7 @@
                 },
                 "inherits": {
                   "version": "2.0.1",
-                  "from": "inherits@2",
+                  "from": "inherits@*",
                   "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz"
                 },
                 "mkdirp": {

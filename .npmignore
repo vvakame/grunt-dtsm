@@ -3,8 +3,8 @@
 .idea/
 
 # for npm
-npm-debug.log
 node_modules/
+npm-shrinkwrap.json
 
 # for grunt
 tscommand.tmp.txt
@@ -15,5 +15,11 @@ test/
 tmp/
 
 # misc
-.jshintrc
+.gitignore
+.editorconfig
 circle.yml
+setup.sh
+Gruntfile.js
+tslint.json
+
+npm-debug.log

@@ -1,7 +1,7 @@
 {
   "name": "grunt-dtsm",
   "description": "Grunt plugin for DTSM",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "homepage": "https://github.com/vvakame/grunt-dtsm",
   "author": {
     "name": "vvakame",

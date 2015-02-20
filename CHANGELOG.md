@@ -1,3 +1,12 @@
+<a name="0.2.5"></a>
+### 0.2.5 (2015-02-20)
+
+
+#### Bug Fixes
+
+* **deps:** add es6-promise to dependencies, it required in node.js v0.10 ([e6106fd5](http://github.com/vvakame/grunt-dtsm/commit/e6106fd538f9a22dc31b94fbbb001523cf0610f4))
+
+
 <a name="0.2.3"></a>
 ### 0.2.3 (2015-02-09)
 

@@ -28,7 +28,8 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "dtsm": "^0.6.2"
+    "dtsm": "^0.6.2",
+    "es6-promise": "^2.0.1"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

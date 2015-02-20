@@ -9,6 +9,7 @@
 'use strict';
 
 module.exports = function (grunt) {
+    require("es6-promise").polyfill();
     var dtsm = require("dtsm");
 
     grunt.registerMultiTask("dtsm", "Install .d.ts files by dtsm", function () {

@@ -1,7 +1,7 @@
 {
   "name": "grunt-dtsm",
   "description": "Grunt plugin for DTSM",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "homepage": "https://github.com/vvakame/grunt-dtsm",
   "author": {
     "name": "vvakame",
@@ -28,7 +28,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "dtsm": "^0.6.2",
+    "dtsm": "^0.8.0",
     "es6-promise": "^2.0.1"
   },
   "devDependencies": {

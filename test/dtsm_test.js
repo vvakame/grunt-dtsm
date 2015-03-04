@@ -30,7 +30,7 @@ exports.dtsm = {
     default_options: function (test) {
         test.expect(1);
 
-        var base = "tmp/jquery-dtsm/typings/";
+        var base = "test/fixtures/tmp/jquery-dtsm/typings/";
         var exists = grunt.file.exists(base + "jquery/jquery.d.ts");
         test.ok(exists);
 
@@ -39,7 +39,7 @@ exports.dtsm = {
     custom_options: function (test) {
         test.expect(1);
 
-        var base = "tmp/atom-dtsm/typings/";
+        var base = "test/fixtures/tmp/atom-dtsm/typings/";
         var targets = [
             base + "atom/atom.d.ts",
             base + "emissary/emissary.d.ts",

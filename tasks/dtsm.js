@@ -32,10 +32,9 @@ module.exports = function (grunt) {
                 return manager.installFromFile();
             })
             .then(function (result) {
-                var depNames = Object.keys(result.dependencies);
-                grunt.log.ok(depNames.length + " files created.");
-                depNames.forEach(function (depName) {
-                    grunt.log.verbose.ok(depName);
+                grunt.log.ok(result.dependenciesList.length + " files created.");
+                result.dependenciesList.forEach(function (dep) {
+                    grunt.log.verbose.ok(dep.depName);
                 });
                 done(true);
             }, function (error) {

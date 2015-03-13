@@ -1,6 +1,12 @@
+<a name="0.2.7"></a>
+### 0.2.7 (2015-03-13)
+
+* **deps:** update dependencies
+
 <a name="0.2.6"></a>
 ### 0.2.6 (2015-03-05)
 
+* **deps:** update dependencies
 
 #### Features
 

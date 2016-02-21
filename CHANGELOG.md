@@ -1,3 +1,9 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/vvakame/grunt-dtsm/compare/0.2.9...v1.0.0) (2016-02-21)
+
+prepare for grunt 1.0.0
+
+
 <a name="0.2.7"></a>
 ### 0.2.7 (2015-03-13)
 
